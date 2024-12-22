@@ -1,0 +1,17 @@
+{% extends "base_account.html" %}
+
+{% block title %}
+    Регистрация
+{% endblock %}
+
+{% block content %}
+
+    <h1>Chose</h1>
+      <div
+        <form action="{{ url_for('change_account') }}" method="post">
+            <label for="user_id">Введите номер аккаунта:</label>
+            <input type="text" id="user_id" name="user_id" required>
+          <button type="submit">Choose Account</button>
+        </form>
+    </div>
+{% endblock %}

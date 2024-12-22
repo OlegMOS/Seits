@@ -8,14 +8,17 @@
     </title>
 </head>
 <body>
+
     <nav>
         <ul>
             <li><a href="{{ url_for('home_account') }}">Home</a></li>
             <li><a href="{{ url_for('create_account') }}">Create Account</a></li>
-            <li><a href="{{ url_for('edit_account') }}">Edit Account</a></li> <!-- Замените 1 на динамическое значение при необходимости -->
-
+            <li><a href="{{ url_for('change_account', user_id = user_id) }}">Choose Account</a></li>
+            <li><a href="{{ url_for('edit_account', user_id = 1) }}">Edit Account</a></li>
         </ul>
     </nav>
+
+
     <div>
         {% with messages = get_flashed_messages(with_categories=true) %}
             {% if messages %}

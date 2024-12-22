@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "base_account.html" %}
 
 {% block title %}
     Регистрация
@@ -87,6 +87,7 @@
                 {% endfor %}
             </div>
             <button type="submit" class="btn">{{ form.submit() }}</button>
+            <p>{{ form.submit() }}</p>
         </form>
     </div>
 
